@@ -9,8 +9,16 @@
 <body>
     <h1>Welcome to the Dice Roll Game!</h1>
 <div class="container">
-    <img src="./images/1.png" alt="Dice Image" height="200" width="200">
-    <button><img src="./images/dice.png" alt="Roll Dice" height="50" width="50"> Roll Dice</button>
+    <img src="./images/1.png" alt="Dice Image" height="250" width="250" id="diceImage">
+    <button class="roll-button" onclick="rollDice()"><img src="./images/dice.png" alt="Roll Dice" height="25" width="25"> Roll Dice</button>
 </div>
+<script>
+    function rollDice() {
+        const randomNumber = Math.round(Math.random()*(6-1)+1) 
+        const diceImage =  document.getElementById('diceImage');
+        diceImage.src = `./images/${randomNumber}.png` 
+    }
+</script>
+
 </body>
 </html>
